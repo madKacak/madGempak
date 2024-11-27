@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            padding: 30px 10%;
+        }
+
+        h2 {
+            color: #0056b3;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #0073e6;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .biodata-info,
+        .hobbies {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+
+        .biodata-info:hover,
+        .hobbies:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .biodata-info p,
+        .hobbies ul {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .biodata-info strong {
+            color: #0056b3;
+        }
+
+        .hobbies ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hobbies li {
+            background: linear-gradient(135deg, #0056b3, #0073e6);
+            color: white;
+            margin: 10px;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            display: inline-block;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0056b3, #00b4d8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 400px;
+            /* Set uniform height */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+		
+		marquee {
+            font-size: 1.2em;
+            color: #0056b3;
+            font-weight: bold;
+            padding: 10px;
+            background: #f9f9ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeInDown 1s;
+        }
+
+        audio {
+            width: 40%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="bg-video">
+            <source src="video/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-content">
+            <h1>Biodata of Muhammad Hafiz</h1>
+            <p>Learn more about me and my background!</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+		<marquee behavior="scroll" direction="left" scrollamount="6">
+            It is all about me, myself, and I! 
+        </marquee>
+
+        <h2>Personal Information</h2>
+        <div class="biodata-info">
+            <p><strong>Name:</strong> Muhammad Hafiz Bin Ahmad</p>
+            <p><strong>Nickname:</strong> Muhammad, Mad, Han</p>
+            <p><strong>Date of Birth:</strong> February 3rd 2004</p>
+            <p><strong>Email:</strong> <a href="mailto:ive.han.27@gmail.com"> ive.han.27@gmail.com</a></p>
+            <p><strong>Phone Number:</strong> 019-690 4875</p>
+        </div>
+
+        <h2>Gallery</h2>
+        <div class="image-gallery">
+            <img src="images/biodata1.jpg" alt="Gallery Image 1">
+            <img src="images/biodata2.jpg" alt="Gallery Image 2">
+            <img src="images/biodata3.jpg" alt="Gallery Image 3">
+            <img src="images/biodata4.jpg" alt="Gallery Image 4">
+        </div>
+
+
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+            <ul>
+                <li>Reading Books</li>
+                <li>Traveling</li>
+                <li>Sports</li>
+                <li>Playing Guitar</li>
+                <li>Music</li>
+                <li>Photography</li>
+                <li>Mobile Games</li>
+            </ul>
+        </div>
+
+        <h2>Ambition</h2>
+        <div class="biodata-info">
+            <p><strong>Ambition :</strong> To be useful for the society.  I.m just a chill guy fr  ;)</p>
+        </div>
+
+        <h2>Skills & Interests</h2>
+        <div class="biodata-info">
+            <p><strong>Computer Skills :</strong> HTML, CSS, Java, PHP</p>
+            <p><strong>Soft Skills :</strong> Communication, Problem-Solving, Teamwork, Time Management, Creative Ideas
+            </p>
+        </div>
+    </main>
+    <audio autoplay controls>
+        <source src="audio/Paradise.mp3" type="audio/mpeg">
+    </audio>
+    <footer>
+        <p>&copy; 2024 Muhammad Hafiz | <a href="index.html">Home</a> | <a href="contact.html">Contact Me</a></p>
+    </footer>
+</body>
+</html>

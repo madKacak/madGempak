@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            padding: 30px 10%;
+        }
+
+        h2 {
+            color: #0056b3;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #0073e6;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .education-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+
+        .education-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-section h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .education-section p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .achievements,
+        .extracurriculars {
+            margin-left: 20px;
+            font-size: 1.1em;
+            list-style-type: square;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0056b3, #00b4d8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .school-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+		
+		marquee {
+            font-size: 1.2em;
+            color: #0056b3;
+            font-weight: bold;
+            padding: 10px;
+            background: #f9f9ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeInDown 1s;
+        }
+
+        audio {
+            width: 40%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="bg-video">
+            <source src="video/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-content">
+            <h1>My Education Journey</h1>
+            <p>Explore the academic milestones that have shaped my career path!</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+		<marquee behavior="scroll" direction="left" scrollamount="6">
+            The places that have helped me become a better person!
+        </marquee>
+
+        <h2>Academic History</h2>
+        <div class="education-section">
+            <h3>School</h3>
+            <p>My school years were filled with academic growth and personal development. I participated in various
+                extracurricular activities, which helped me develop important skills like teamwork and leadership.</p>
+            <ul class="achievements">
+                <li><strong>Achievements :</strong> Excelled in Mathematics, Computer Science, and English,
+                    also consistently achieving top scores in those subjects.</li>
+                <li><strong>Favorite Subjects :</strong> Mathematics, Physics, English.</li>
+                <li><strong>Notable Extracurricular Activities :</strong> Member of the school's sport club,
+                    where we compete for the top athlete in all competitions nationally.</li>
+            </ul>
+        </div>
+
+        <div class="education-section">
+            <h3>UiTM</h3>
+            <p>At UiTM, I pursued my passion for technology through my studies in Information Science. My academic
+                journey
+                has been shaped by both challenging coursework and involvement in various clubs and events.</p>
+            <ul class="achievements">
+                <li><strong>Program of Study :</strong> Currently pursuing a Diploma in Information Management
+                    (2022-Present)</li>
+                <li><strong>Courses Taken :</strong> Data Structures, Web Development, Database Management, Artificial
+                    Intelligence, Archive Management, File Management.</li>
+                <li><strong>Academic Awards :</strong> Dean's List (2023, 2024).</li>
+                <li><strong>Extracurricular Activities:</strong> Active participant in the university events and
+                    programs.</li>
+            </ul>
+        </div>
+
+        <h2>Education Details</h2>
+        <div class="education-section">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr style="background-color: #0073e6; color: white;">
+                        <th style="padding: 10px; text-align: left;">Institution</th>
+                        <th style="padding: 10px; text-align: left;">Program</th>
+                        <th style="padding: 10px; text-align: left;">Year</th>
+                        <th style="padding: 10px; text-align: left;">Achievements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; display: flex; align-items: center;">
+                            <img src="images/education.jpg" alt="SK Kompleks KLIA Logo" class="school-logo">
+                            SK Kompleks KLIA
+                        </td>
+                        <td style="padding: 10px;">Primary Education</td>
+                        <td style="padding: 10px;">2011 - 2016</td>
+                        <td style="padding: 10px;">Head of The Library Prefect (2015, 2016), Top Scorer in Mathematics
+                            (2016), Top Scorer in English (2016), MSSD Sprint 100m (2016), MSSD Sprint 200m (2016)</td>
+                    </tr>
+                    <tr style="background-color: #ffffff;">
+                        <td style="padding: 10px; display: flex; align-items: center;">
+                            <img src="images/education2.jpg" alt="SM Agama Sains Kuala Pilah Logo" class="school-logo">
+                            SM Agama Sains Kuala Pilah, Negeri Sembilan
+                        </td>
+                        <td style="padding: 10px;">Secondary Education (lower form)</td>
+                        <td style="padding: 10px;">2017 - 2019</td>
+                        <td style="padding: 10px;">Public Speaking Negeri Sembilan (2018), Top Scorer in English (2018,
+                            2019), MSSD Volleyball (2018), MSSN Sprint 100m (2019), MSSN Sprint 200m (2019), MSSN Sprint
+                            4x100 (2019), Science Quiz Award (2019), International Marathon 20KM (2019), State Sprint
+                            400m (2019), JOTA Pengakap Kebangsaan (2019)</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <!-- <td style="padding: 10px;">SMK Raja Permaisuri Bainun, Ipoh, Perak</td> -->
+                        <td style="padding: 10px; display: flex; align-items: center;">
+                            <img src="images/education3.jpg" alt="SMK Raja Permaisuri Bainun Logo" class="school-logo">
+                            SMK Raja Permaisuri Bainun, Ipoh, Perak
+                        </td>
+                        <td style="padding: 10px;">Secondary Education (higher form)</td>
+                        <td style="padding: 10px;">2020 - 2022</td>
+                        <td style="padding: 10px;">Second-in-command School Prefect (2020), National Mathematics Quizz
+                            Online (2021),
+                            Head of The Sport Department Prefect (2021,2022)</td>
+                    </tr>
+                    <tr style="background-color: #ffffff;">
+                        <!-- <td style="padding: 10px;">UiTM Cawangan Kedah, Kampus Sungai Petani</td> -->
+                        <td style="padding: 10px; display: flex; align-items: center;">
+                            <img src="images/education4.jpg" alt="UiTM Logo" class="school-logo">
+                            UiTM Cawangan Kedah, Kampus Sungai Petani
+                        </td>
+                        <td style="padding: 10px;">Diploma in Computer Science</td>
+                        <td style="padding: 10px;">2022 - Present</td>
+                        <td style="padding: 10px;">Asean Community Student Association (ACSA) Development and
+                            Entrepreneurship Exco (2022, 2023),
+                            Jawatankuasa Pemilihan Jawatankuasa Perwakilan Pelajar UiTM (2022, 2023),
+                            Hari Sukan Negara Athlete (2023), Sekretariat Parlimen Mahasiswa UiTM (2023, 2024),
+                            ACSA Interim Vice President (2024), ACSA Vice Secretary (2024)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <audio autoplay controls>
+        <source src="audio/Paradise.mp3" type="audio/mpeg">
+    </audio>
+    <footer>
+        <p>&copy; 2024 Muhammad Hafiz | <a href="index.html">Home</a> | <a href="contact.html">Contact Me</a></p>
+    </footer>
+</body>
+</html>

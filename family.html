@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            padding: 30px 10%;
+        }
+
+        h2 {
+            color: #0056b3;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #0073e6;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .family-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+
+        .family-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .family-section h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .family-section p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0056b3, #00b4d8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		
+		marquee {
+            font-size: 1.2em;
+            color: #0056b3;
+            font-weight: bold;
+            padding: 10px;
+            background: #f9f9ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeInDown 1s;
+        }
+
+        audio {
+            width: 40%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="bg-video">
+            <source src="video/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-content">
+            <h1>My Family</h1>
+            <p>Meet the people who make me who I am today!</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+		<marquee behavior="scroll" direction="left" scrollamount="6">
+            My precious people of all time!
+        </marquee>
+		
+        <h2>Family Members</h2>
+        <div class="family-grid">
+            <div class="family-section">
+                <h3>Dato' Seri Ahmad</h3>
+                <p><strong>Name :</strong> Ahmad Bin Majit</p>
+                <p><strong>Profession :</strong> Customs Officer Pension, Part-time teacher</p>
+                <p><strong>Hobbies :</strong> Reading, gardening, cooking, take a walk outside</p>
+                <p><strong>Notable Information :</strong> He is a great mentor, always sharing wisdom from his life
+                    experiences and encouraging me to chase my dreams.</p>
+            </div>
+            <div class="family-section">
+                <h3>Datin Seri Harlina</h3>
+                <p><strong>Name :</strong> Harlina Binti Osman</p>
+                <p><strong>Profession :</strong> Housewife, Part-time teacher, Part-time sewing</p>
+                <p><strong>Hobbies :</strong> Reading, gardening, cooking, take a walk outside</p>
+                <p><strong>Notable Information :</strong> She has an amazing ability to manage multiple responsibilities
+                    at
+                    once, and she always makes time for the family, no matter how busy she gets.</p>
+            </div>
+            <div class="family-section">
+                <h3>Haliza</h3>
+                <p>First and the most independent sibling</p>
+				<p><strong>Profession :</strong> Businesswoman</p>
+				<p><strong>Hobbies :</strong> Travelling, shopping</p>
+            </div>
+            <div class="family-section">
+                <h3>Hanis</h3>
+                <p>The most chaotic sibling in the house</p>
+				<p><strong>Profession :</strong> Chemist</p>
+				<p><strong>Hobbies :</strong> Food hunting, watching movies</p>
+            </div>
+            <div class="family-section">
+                <h3>Husna</h3>
+                <p>Introvert one but has interesting personalities</p>
+				<p><strong>Profession :</strong> Pharmacist</p>
+				<p><strong>Hobbies :</strong> Watching K-drama, Cooking</p>
+            </div>
+            <div class="family-section">
+                <h3>Hafiz</h3>
+                <p>Of course it's <a href="biodata.html">Me!!</a></p>
+            </div>
+        </div>
+    </main>
+    <audio autoplay controls>
+        <source src="audio/Paradise.mp3" type="audio/mpeg">
+    </audio>
+    <footer>
+        <p>&copy; 2024 Muhammad Hafiz | <a href="index.html">Home</a> | <a href="contact.html">Contact Me</a></p>
+    </footer>
+</body>
+</html>
